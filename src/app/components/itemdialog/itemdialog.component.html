@@ -1,0 +1,33 @@
+<!-- <h1 mat-dialog-title>Artikel hinzufügen</h1>
+<div mat-dialog-content style="text-align: right;">
+    <input class="dialog-input" matInput type="text" name="" id="">
+    <br>
+    <span id="name-label">Artikelbezeichnung</span>
+    <br>
+    <textarea class="dialog-input" matInput name="" id="" cols="30" rows="10"></textarea>
+    <br>
+    <span id="description-label">Beschreibung</span>
+</div>
+<div mat-dialog-actions>
+    <div style="margin: auto;">
+        <button mat-raised-button mat-dialog-close="true" color="primary">OK</button>
+        <button mat-raised-button mat-dialog-close="false">Abbrechen</button>
+    </div>
+</div> -->
+
+<h2 mat-dialog-title>Artikel hinzufügen</h2>
+<form (ngSubmit)="addItem()">
+    <mat-form-field appearance="outline">
+        <mat-label>Artikel</mat-label>
+        <input [formControl]="name" matInput type="text" required autocomplete="off">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="outline">
+        <mat-label>Details</mat-label>
+        <textarea [formControl]="details" matInput name="" id="" cols="30" rows="5" style="resize: none;"></textarea>
+    </mat-form-field>
+    <div class="action-area">
+        <button mat-raised-button color="primary" type="submit" mat-dialog-close="true">Ok</button>
+        <button mat-raised-button type="submit" mat-dialog-close="false">Abbrechen</button>
+    </div>
+</form>

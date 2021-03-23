@@ -1,0 +1,11 @@
+mat-form-field {
+    width: 100%;
+}
+
+.action-area {
+    text-align: right;
+}
+
+.action-area button {
+    margin: 5px;
+}

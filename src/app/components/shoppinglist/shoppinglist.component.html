@@ -1,0 +1,34 @@
+<div class="site-header">
+    <h1>Einkaufsliste</h1>
+</div>
+
+<div *ngIf="shoppingList.length > 0;else noItems">
+    <div class="shoppinglist" *ngFor="let item of shoppingList">
+        <mat-card (dblclick)="editItem(item)">
+            <img class="checkbox {{ (item.done ? 'cb-done' : '') }}" src="assets/done.svg" alt="" (click)="toggleCheck(item)">
+            <div style="padding-left: 45px;">
+                <mat-card-title class="{{ (item.done ? 'text-done' : '') }}">{{ item.name }}</mat-card-title>
+                <mat-card-subtitle class="{{ (item.done ? 'text-done' : '') }}">{{ item.description }}</mat-card-subtitle>
+            </div>
+            <div class="item-action">
+                <button id="editBtn" class="actionBtn" (click)="editItem(item)">
+                    <img src="assets/edit.svg" alt="">
+                </button>
+                <button id="deleteBtn" class="actionBtn" (click)="deleteItem(item)">
+                    <img src="assets/delete.svg" alt="">
+                </button>
+            </div>
+        </mat-card>
+    </div>
+</div>
+
+<ng-template #noItems>
+    <div style="position: relative; text-align: center; top: 35%;">
+        <span style="display: block; margin: auto;">Keine Artikel auf der Einkaufsliste.</span>
+    </div>
+</ng-template>
+
+<button id="addItemBtn" (click)="addItem()">
+    <img src="assets/add_shopping.svg" alt="">
+</button>
+

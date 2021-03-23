@@ -1,0 +1,94 @@
+mat-card {
+    margin: 5px;
+    padding-bottom: 5px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+mat-card:hover {
+    background-color: #E6F8C4;
+}
+
+.shoppinglist:last-of-type {
+    margin-bottom: 100px;
+}
+
+.checkbox {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 1px solid #bbb;
+    border-radius: 50%;
+    width: 20px;
+    margin-left: 5px;
+    padding: 2px;
+    transition: .1s;
+}
+
+.cb-done {
+    background-color: #9DE319;
+}
+
+.item-content {
+    position: absolute;
+    top: 50%;;
+    transform: translateY(-50%);
+    margin-left: 45px;
+}
+
+.item-action {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.actionBtn {
+    margin: 2px;
+    width: 30px;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+}
+
+#editBtn {
+    background-color: #eee;
+}
+
+#editBtn:hover {
+    background-color: #ddd;
+}
+
+#deleteBtn {
+    background-color: #ffc0bd;
+}
+
+#deleteBtn:hover {
+    background-color: #ff817a;
+}
+
+#addItemBtn {
+    position: fixed;
+    right: 30px;
+    bottom: 25px;
+    width: 75px;
+    height: 75px;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    background-color: #BEEE62;
+}
+
+#addItemBtn:hover {
+    background-color: #CEF28A;
+}
+
+#addItemBtn img {
+    width: 30px;
+    transform: translate(1px, 2px);
+}
+
+.text-done {
+    text-decoration: line-through;
+}

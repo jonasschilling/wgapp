@@ -1,0 +1,40 @@
+<div class="site-header">
+    <h1>Home</h1>
+</div>
+
+<div class="features-section">
+    <mat-card>
+        <div class="cardRouterArea" routerLink="/shoppinglist-component">
+            <mat-card-title>Einkaufsliste</mat-card-title>
+            <mat-card-content>Pflegt eine gemeinsame Einkaufsliste</mat-card-content>
+            <img mat-card-image src="assets/shopping.svg">
+        </div>
+        <mat-card-footer>
+            <div class="footer-content">
+                <input type="text" placeholder="Artikel hinzufügen...">
+                <button mat-raised-button color="primary">Hinzufügen</button>
+            </div>
+        </mat-card-footer>
+    </mat-card>
+    <mat-card routerLink="/finance-component">
+        <mat-card-title>Finanzen</mat-card-title>
+        <mat-card-content>Regelt gemeinsam eure Ausgaben</mat-card-content>
+        <img mat-card-image src="assets/euro.svg">
+        <mat-card-footer>
+            <div class="footer-content">
+                <p>Du bekommst: 10€</p>
+                <p>Du schuldest: 25€</p>
+            </div>
+        </mat-card-footer>
+    </mat-card>
+    <mat-card routerLink="/cleaningplan-component">
+        <mat-card-title>Putzplan</mat-card-title>
+        <mat-card-content>Sorgt zusammen für Sauberkeit</mat-card-content>
+        <img mat-card-image src="assets/cleaning.svg">
+        <mat-card-footer>
+            <div class="footer-content">
+                <p>Nächstes Mal: Jonas</p>
+            </div>
+        </mat-card-footer>
+    </mat-card>
+</div>
